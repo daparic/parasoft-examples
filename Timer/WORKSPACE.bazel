@@ -1,0 +1,2 @@
+# Be sure to set "path" to C/C++test installation location.
+local_repository(name = "cpptest", path = "../..")

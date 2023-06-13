@@ -1,0 +1,26 @@
+The "Sensor" project is provided to demonstrate the C++test and MDK-ARM
+tools integration. Project is targeted for MCBSTM32E Evaluation Board and
+Simulator.
+
+Example functionality:                                                  
+ - Clock Settings:
+   - XTAL    =            8.00 MHz
+   - SYSCLK  =           72.00 MHz
+   - HCLK    = SYSCLK  = 72.00 MHz
+   - PCLK1   = HCLK/2  = 36.00 MHz
+   - PCLK2   = HCLK    = 72.00 MHz
+   - ADCLK   = PCLK2/6 = 12.00 MHz
+   - SYSTICK = HCLK/8  =  9.00 MHz
+ - Captures the value from a "Sensor". "Sensor" is a potentiometer
+   connected to ACD.
+ - color LCD display shows status message and a bar graph
+   depending on values from the "Sensor"
+ - AD value is output onto serial port USART2
+   USART2 settings: 115200 baud, 8 data bits, no parity, 1 stop bit
+ 
+The "Sensor" program is available in different targets:
+  Simulator:      configured for software Simulator
+  STM32 Flash:    runs from Internal Flash located on chip and is
+                  configured for Trace
+  C++test         configured for running Unit Tests or Application
+                  monitoring with C++test.

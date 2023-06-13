@@ -1,0 +1,6 @@
+# Default parameters to genreate a Parasoft C/C++test bdf file
+run:cpptest_bdf //:cpptest_bdf --@cpptest//:project-name=Timer --@cpptest//:compiler-config=gcc_10-64
+
+# Default parameters to instrument with Parasoft C/C++test for coverage
+run:cpptest_coverage //:cpptest_coverage --@cpptest//:project-name=Timer --@cpptest//:compiler-config=gcc_10-64 --@cpptest//:line-coverage
+

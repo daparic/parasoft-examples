@@ -1,0 +1,43 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
+cc_binary(
+    name = "Timer",
+    srcs = [
+        "clock.c",
+        "driver.c",
+        "stdinout.c",
+        "timer.c",
+        "clock.h",
+        "consts.h",
+        "inout.h",
+        "timer.h"
+    ],
+    # copts = [ "-DSTDINPUT" ],
+)
+
+# Be sure to set "path" to C/C++test installation in WORKSPACE file.
+load("@cpptest//:integration/bazel/cpptest.bzl",
+    "cpptest_generate_bdf",
+    "cpptest_code_coverage_executable"
+)
+targets = [ "Timer" ]
+
+# Generate Timer.bdf and Eclipse project definition files (parameters set in .bazelrc):
+# > bazel run --config=cpptest_bdf
+# Import project into Eclipse workspace and run analysis:
+# > cpptestcli -data /path/to/workspace -import . -config "builtin://Recommended Rules" -report reports
+cpptest_generate_bdf(
+    name = "cpptest_bdf",
+    deps = targets,
+)
+
+# Build test-binary with code coverage instrumentation (parameters set in .bazelrc):
+# > bazel run --config=cpptest_coverage
+# Execute test-binary:
+# > bazel-bin/Timer.elf
+# Import project into Eclipse workspace and generate coverage report:
+# > cpptestcli -data /path/to/workspace -import . -config "builtin://Load Application Coverage" -report reports
+cpptest_code_coverage_executable(
+    name = "cpptest_coverage",
+    deps = targets
+)

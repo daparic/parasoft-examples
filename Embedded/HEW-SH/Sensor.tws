@@ -1,0 +1,29 @@
+[HIMDBVersion]
+2.0
+[DATABASE_VERSION]
+"1.2" 
+[CURRENT_PROJECT]
+"Sensor" 
+[GENERAL_DATA]
+[BREAKPOINTS]
+[OPEN_WORKSPACE_FILES]
+"C:\WorkSpace\Sensor\Sensor\Main.c" 
+"C:\WorkSpace\Sensor\Sensor\resetprg.c" 
+"C:\WorkSpace\Sensor\Sensor\sbrk.c" 
+"C:\WorkSpace\Sensor\Sensor\sbrk.h" 
+"C:\WorkSpace\Sensor\Sensor\Sensor.c" 
+"C:\WorkSpace\Sensor\Sensor\Sensor.h" 
+"C:\WorkSpace\Sensor\Sensor\stacksct.h" 
+"C:\WorkSpace\Sensor\Sensor\vect.inc" 
+[WORKSPACE_FILE_STATES]
+"C:\WorkSpace\Sensor\Sensor\Main.c" 44 58 838 361 0 2 
+"C:\WorkSpace\Sensor\Sensor\Sensor.c" 0 0 978 627 0 0 
+"C:\WorkSpace\Sensor\Sensor\Sensor.h" 66 87 838 361 0 3 
+"C:\WorkSpace\Sensor\Sensor\resetprg.c" 0 0 978 569 0 1 
+"C:\WorkSpace\Sensor\Sensor\sbrk.c" 0 0 838 419 0 7 
+"C:\WorkSpace\Sensor\Sensor\sbrk.h" -4 -30 543 199 1 5 
+"C:\WorkSpace\Sensor\Sensor\stacksct.h" 0 0 838 361 0 6 
+"C:\WorkSpace\Sensor\Sensor\vect.inc" 88 116 838 419 0 4 
+[LOADED_PROJECTS]
+"Sensor" 
+[END]
